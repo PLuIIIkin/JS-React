@@ -157,3 +157,33 @@
 // }
 
 // console.log(result)
+
+// Место для первой задачи
+function sayHello(name) {
+    return `Привет, ${name}`;
+}
+console.log(sayHello('Антон'));
+// Место для второй задачи
+function returnNeighboringNumbers(i) {
+    return [i - 1, i, i + 1];
+}
+console.log(returnNeighboringNumbers(5));
+// Место для третьей задачи
+function getMathResult(a, b) {
+    if (b <= 0 || typeof b === 'string') {
+        return a;
+    }
+
+    let str = '';
+
+    for (let i = 1; i <= b; i++) {
+        if (i === b){
+            str += `${a * i}`
+        } else {
+            str += `${a * i}---`
+        }
+    }
+    return str
+}
+
+console.log(getMathResult(2, 5));
