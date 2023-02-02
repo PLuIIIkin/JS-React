@@ -240,15 +240,83 @@
 
 // console.log(getCoupeNumber('ра'));
 
+// function getCoupeNumber(num) {
+//     if (num === 0 || num > 36) {
+//         return 'Таких мест в вагоне не существует';
+//     }
+//     if ((num % 1 !== 0) || num < 0 || typeof(num) === 'string') {
+//         return 'Ошибка. Проверьте правильность введенного номера места';
+//     }
+//     return Math.ceil(num/4);
+//  }
 
-function getCoupeNumber(num) {
-    if (num === 0 || num > 36) {
-        return 'Таких мест в вагоне не существует';
-    } 
-    if ((num % 1 !== 0) || num < 0 || typeof(num) === 'string') {
-        return 'Ошибка. Проверьте правильность введенного номера места';
-    }
-    return Math.ceil(num/4);
- }   
+//  console.log(getCoupeNumber(1));
 
- console.log(getCoupeNumber(1));
+// function getTimeFromMinutes(time) {
+//   if (typeof time === 'string' || time < 0 || !Number.isInteger(time)) {
+//     return 'Ошибка, проверьте данные';
+//   }
+
+//   let hours = Math.floor(time / 60);
+//   let minutes = time % 60;
+
+//   let str = '';
+
+//   switch (hours) {
+//     case 0:
+//       str = 'часов';
+//       break;
+//     case 1:
+//       str = 'час';
+//       break;
+//     case 2:
+//     case 3:
+//     case 4:
+//       str = 'часа';
+//       break;
+//     default:
+//       str = 'часов';
+//       break;
+//   }
+
+//   return `Это ${hours} ${str} и ${minutes} минут`
+// }
+
+// console.log(getTimeFromMinutes(205))
+
+// function findMaxNumber(a, b, c, d) {
+//     if (typeof(a) !== 'number' || typeof(b) !== 'number' || typeof(c) !== 'number' || typeof(d) !== 'number'){
+//         return 0
+//     } else {
+//         return Math.max(a, b, c, d)
+//     }
+// }
+
+// console.log(findMaxNumber(1, 5, '10', -12))
+
+// function fib(num) {
+//   if (typeof num === 'string' || num < 0 || !Number.isInteger(num)) {
+//     return '';
+//   }
+
+//   let result = '';
+//   let a = 0;
+//   let b = 1;
+
+//   for (let i = 0; i < num; i++) {
+//       if (i + 1 === num) {
+//           result += `${a}`;
+//           // Без пробела в конце
+//       } else {
+//           result += `${a} `;
+//       }
+
+//       let c = a + b;
+//       a = b;
+//       b = c;
+//   }
+
+//   return result;
+// }
+
+// console.log(fib(6));
