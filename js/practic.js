@@ -159,31 +159,96 @@
 // console.log(result)
 
 // Место для первой задачи
-function sayHello(name) {
-    return `Привет, ${name}`;
-}
-console.log(sayHello('Антон'));
-// Место для второй задачи
-function returnNeighboringNumbers(i) {
-    return [i - 1, i, i + 1];
-}
-console.log(returnNeighboringNumbers(5));
-// Место для третьей задачи
-function getMathResult(a, b) {
-    if (b <= 0 || typeof b === 'string') {
-        return a;
+// function sayHello(name) {
+//     return `Привет, ${name}`;
+// }
+// console.log(sayHello('Антон'));
+// // Место для второй задачи
+// function returnNeighboringNumbers(i) {
+//     return [i - 1, i, i + 1];
+// }
+// console.log(returnNeighboringNumbers(5));
+// // Место для третьей задачи
+// function getMathResult(a, b) {
+//     if (b <= 0 || typeof b === 'string') {
+//         return a;
+//     }
+
+//     let str = '';
+
+//     for (let i = 1; i <= b; i++) {
+//         if (i === b){
+//             str += `${a * i}`
+//         } else {
+//             str += `${a * i}---`
+//         }
+//     }
+//     return str
+// }
+
+// console.log(getMathResult(2, 5));
+
+// function calculateVolumeAndArea(num) {
+//     if (typeof(num) !== 'number' || num < 0 || !Number.isInteger(num)) {
+//         return 'При вычислении произошла ошибка';
+//     }
+
+//    let volume = num * num * num;
+//    let square = num * num * 6;
+
+//    return `Объем куба: ${volume}, площадь всей поверхности: ${square}`
+
+// }
+
+// console.log(calculateVolumeAndArea(15))
+
+// function getCoupeNumber(num) {
+//     if (num == 0 || num >= 37) {
+//         return 'Таких мест в вагоне не существует';
+//     }
+//     if (typeof(num) === 'string' || num < 0 || !Number.isInteger(num)) {
+//         return 'Ошибка. Проверьте правильность введенного номера места';
+//     }
+//     if (num == 1 || num <= 4) {
+//         return '1';
+//     }
+//     if (num == 5 || num <= 8) {
+//         return '2';
+//     }
+//     if (num == 9 || num <= 12) {
+//         return '3';
+//     }
+//     if (num == 13 || num <= 16) {
+//         return '4';
+//     }
+//     if (num == 17 || num <= 20) {
+//         return '5';
+//     }
+//     if (num == 21 || num <= 24) {
+//         return '6';
+//     }
+//     if (num == 25 || num <= 28) {
+//         return '7';
+//     }
+//     if (num == 29 || num <= 32) {
+//         return '8';
+//     }
+//     if (num == 33 || num <= 36) {
+//         return '9';
+//     }
+// }
+
+// console.log(getCoupeNumber('ра'));
+
+
+function getCoupeNumber(num) {
+    if (num === 0 || num > 36) {
+        return 'Таких мест в вагоне не существует';
+    } 
+    if ((num % 1 !== 0) || num < 0 || typeof(num) === 'string') {
+        return 'Ошибка. Проверьте правильность введенного номера места';
     }
+    return Math.ceil(num/4);
+ }   
 
-    let str = '';
-
-    for (let i = 1; i <= b; i++) {
-        if (i === b){
-            str += `${a * i}`
-        } else {
-            str += `${a * i}---`
-        }
-    }
-    return str
-}
-
-console.log(getMathResult(2, 5));
+ console.log(getCoupeNumber(1));
