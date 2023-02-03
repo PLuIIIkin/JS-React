@@ -210,35 +210,35 @@
 //         return 'Ошибка. Проверьте правильность введенного номера места';
 //     }
 //     if (num == 1 || num <= 4) {
-//         return '1';
+//         return 1;
 //     }
 //     if (num == 5 || num <= 8) {
-//         return '2';
+//         return 2;
 //     }
 //     if (num == 9 || num <= 12) {
-//         return '3';
+//         return 3;
 //     }
 //     if (num == 13 || num <= 16) {
-//         return '4';
+//         return 4;
 //     }
 //     if (num == 17 || num <= 20) {
-//         return '5';
+//         return 5;
 //     }
 //     if (num == 21 || num <= 24) {
-//         return '6';
+//         return 6;
 //     }
 //     if (num == 25 || num <= 28) {
-//         return '7';
+//         return 7;
 //     }
 //     if (num == 29 || num <= 32) {
-//         return '8';
+//         return 8;
 //     }
 //     if (num == 33 || num <= 36) {
-//         return '9';
+//         return 9;
 //     }
 // }
 
-// console.log(getCoupeNumber('ра'));
+// console.log(getCoupeNumber('2'));
 
 // function getCoupeNumber(num) {
 //     if (num === 0 || num > 36) {
@@ -320,3 +320,55 @@
 // }
 
 // console.log(fib(6));
+
+// const options = {
+//     name: 'Test',
+//     cfrtridg: {
+//         corpus: 'black',
+//         foto: 'green',
+//         toner: 'black'
+//     },
+//     box: {
+//         name: 'q2612a',
+//         color: 'green'
+//     },
+//     creslo: 'black',
+//     stol: 'gray'
+// }
+
+// console.log(Object.keys(options['box']).length)
+
+const personalPlanPeter = {
+    name: 'Peter',
+    age: '29',
+    skills: {
+        languages: ['ru', 'eng'],
+        programmingLangs: {
+            js: '20%',
+            php: '10%',
+        },
+        exp: '1 month',
+    },
+};
+
+// function showExperience(plan) {
+    
+//     const {name, age, skills: {languages, programmingLangs:{js, php}, exp}} = personalPlanPeter;
+
+//     return (plan = exp);
+// }
+
+// function showExperience(plan) {
+//     const copy = {...personalPlanPeter};
+
+//     return plan = copy['skills']['exp'];
+// }
+
+
+function showProgrammingLangs(plan) {
+    const {name, age, skills: {languages, programmingLangs:{js, php}, exp}} = personalPlanPeter;
+
+    return plan = `Язык js изучен на ${js} Язык php изучен на ${php}`
+}
+console.log(showProgrammingLangs(personalPlanPeter));
+
