@@ -338,37 +338,176 @@
 
 // console.log(Object.keys(options['box']).length)
 
-const personalPlanPeter = {
-    name: 'Peter',
-    age: '29',
-    skills: {
-        languages: ['ru', 'eng'],
-        programmingLangs: {
-            js: '20%',
-            php: '10%',
-        },
-        exp: '1 month',
-    },
-};
+// const personalPlanPeter = {
+//   name: 'Peter',
+//   age: '29',
+//   skills: {
+//     languages: ['ru', 'eng'],
+//     programmingLangs: {
+//       js: '20%',
+//       php: '10%',
+//     },
+//     exp: '1 month',
+//   },
+//   showAgeAndLangs(plan) {
+//     const { age } = plan;
+//     const { languages } = plan.skills;
+//     let str = `Мне ${age} и я владею языками: ${languages.join(' ').toUpperCase()}`;
+
+//     return str;
+//   },
+// };
 
 // function showExperience(plan) {
-    
 //     const {name, age, skills: {languages, programmingLangs:{js, php}, exp}} = personalPlanPeter;
-
 //     return (plan = exp);
 // }
 
 // function showExperience(plan) {
-//     const copy = {...personalPlanPeter};
-
-//     return plan = copy['skills']['exp'];
+//     const {exp} = plan.skills;
+//     return exp;
 // }
 
+// function showProgrammingLangs(plan) {
+//     let str = '';
+//     const {programmingLangs} = plan.skills;
+//     for (let key in programmingLangs){
+//         str += `Язык ${key} изучен на ${programmingLangs[key]}\n`;
+//     }
 
-function showProgrammingLangs(plan) {
-    const {name, age, skills: {languages, programmingLangs:{js, php}, exp}} = personalPlanPeter;
+//     return str;
+// }
+// console.log(personalPlanPeter.showAgeAndLangs(personalPlanPeter));
 
-    return plan = `Язык js изучен на ${js} Язык php изучен на ${php}`
-}
-console.log(showProgrammingLangs(personalPlanPeter));
+// const family = [];
 
+// function showFamily(arr) {
+//   if (arr.length < 1) {
+//     return `Семья пуста`;
+//   } else {
+//     return `Семья состоит из: ${arr.join(' ')}`;
+//   }
+// }
+
+// const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+// function standardizeStrings(arr) {
+//   return arr.forEach(i => console.log(i.toLowerCase()));
+// }
+
+// standardizeStrings(favoriteCities);
+
+// const someString = 'This is some strange string';
+
+// function reverse(str) {
+//   if (typeof(str) != 'string') {
+//     return 'Ошибка!';
+//   } else {
+//     return str.split('').reverse().join('');
+//   }
+// }
+
+// const baseCurrencies = ['USD', 'EUR'];
+// const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+
+// function availableCurr(arr, missingCurr) {
+//   let str = '';
+
+//   arr.length === 0 ? str = 'Нет доступных валют' : str = 'Доступные валюты:\n';
+
+//   arr.forEach(function(curr) {
+//     if (curr !== missingCurr) {
+//       str += `${curr}\n`
+//     }
+//   });
+//   return str;
+// }
+
+// console.log(availableCurr(['USD', 'EUR'], 'USD'));
+// console.log(availableCurr(1))
+
+// const shoppingMallData = {
+//   shops: [
+//     {
+//       width: 10,
+//       length: 5,
+//     },
+//     {
+//       width: 15,
+//       length: 7,
+//     },
+//     {
+//       width: 20,
+//       length: 5,
+//     },
+//     {
+//       width: 8,
+//       length: 10,
+//     },
+//   ],
+//   height: 5,
+//   moneyPer1m3: 30,
+//   budget: 50000,
+// };
+
+// function isBudgetEnough(data) {
+//   let totalArea = 0;
+
+//   for (const shop of data.shops) {
+//     totalArea += shop.width * shop.length;
+//   }
+//   console.log(totalArea);
+
+//   const totalAreaCub = totalArea * data.height;
+//   console.log(totalAreaCub);
+
+//   const sum = totalAreaCub * data.moneyPer1m3;
+//   console.log(sum);
+//   if (sum - data.budget >= 0) {
+//     return `Бюджета достаточно`;
+//   } else {
+//     return `Бюджета недостаточно`;
+//   }
+// }
+// function isBudgetEnough(data) {
+//   let square = 0;
+//   let volume = 0;
+
+//   data.shops.forEach(shop => {
+//       square += shop.width * shop.length;
+//   });
+//   console.log(square);
+//   volume = data.height * square;
+//   console.log(volume);
+
+//   if (data.budget - (volume * data.moneyPer1m3) >= 0) {
+//       return 'Бюджета достаточно';
+//   } else {
+//       return 'Бюджета недостаточно';
+//   }
+// }
+// console.log(isBudgetEnough(shoppingMallData));
+
+// const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam'];
+
+// function sortStudentsByGroups(arr) {
+//    arr.sort();
+
+//   let str = [];
+
+//   while (arr.length > 0) {
+//    const arrs = arr.splice(0, 3);
+//    str.push(arrs);
+//   }
+//   // `Оставшиеся студенты: ${str.length === 0 ? '-' : str.join(', ')}`
+//   if (str.length === 0) {
+//     str.join(`Оставшиеся студенты: -`)
+//   } else if (str.length < 3) {
+//     str.join(`Оставшиеся студенты: ${str}`)
+//   }
+
+
+//   return str;
+// }
+
+// console.log(sortStudentsByGroups(students))
